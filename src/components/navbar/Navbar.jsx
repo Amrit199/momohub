@@ -41,6 +41,9 @@ const Navbar = (props) => {
             <NavLink to={"/campaign"} className={({isActive}) => (isActive ? "text-white bg-black p-2 rounded-lg" : "transition-colors delay-150 hover:bg-[#5a616c] hover:text-white p-2 rounded-lg")}>
               Campaign
             </NavLink>
+            <NavLink to={"/booking"} className={({isActive}) => (isActive ? "text-white bg-black p-2 rounded-lg" : "transition-colors delay-150 hover:bg-[#5a616c] hover:text-white p-2 rounded-lg")}>
+              Reservation
+            </NavLink>
             <NavLink to={"/contact"} className={({isActive}) => (isActive ? "text-white bg-black p-2 rounded-lg" : "transition-colors delay-150 hover:bg-[#5a616c] hover:text-white p-2 rounded-lg")}>
               Contact Us  
             </NavLink>
@@ -101,6 +104,9 @@ const Navbar = (props) => {
             </NavLink>
             <NavLink to={"/campaign"} className={({isActive}) => (isActive ? "text-white bg-black p-2 rounded-lg" : "transition-colors delay-150 hover:bg-[#5a616c] hover:text-white p-2 rounded-lg")}>
               Campaign
+            </NavLink>
+            <NavLink to={"/booking"} className={({isActive}) => (isActive ? "text-white bg-black p-2 rounded-lg" : "transition-colors delay-150 hover:bg-[#5a616c] hover:text-white p-2 rounded-lg")}>
+              Reservation
             </NavLink>
             <NavLink to={"/contact"} className={({isActive}) => (isActive ? "text-white bg-black p-2 rounded-lg" : "transition-colors delay-150 hover:bg-[#5a616c] hover:text-white p-2 rounded-lg")}>
               Contact Us  

@@ -7,6 +7,7 @@ const Home = lazy(() => import("../pages/Home"));
 const Product = lazy(() => import("../pages/Product"));
 const About = lazy(() => import("../pages/About"));
 const Campaign = lazy(() => import("../pages/Campaign"));
+const Booking = lazy(() => import("../pages/Booking"));
 const Contact = lazy(() => import("../pages/Contact"));
 
 const AnimateRoutes = () => {
@@ -19,6 +20,7 @@ const AnimateRoutes = () => {
           <Route path="/product" element={<Product />} />
           <Route path="/about" element={<About />} />
           <Route path="/campaign" element={<Campaign />} />
+          <Route path="/booking" element={<Booking />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </Suspense>
