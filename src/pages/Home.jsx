@@ -20,6 +20,7 @@ const Home = () => {
         <div className="w-full h-full absolute z-10 text-white flex flex-col items-center justify-center text-center gap-6 bg-black/50">
           <div className="font-bold text-4xl lg:text-6xl">
             Try Best Taste Of MOMO
+            hello
           </div>
           <div className="font-bold text-4xl lg:text-6xl">
             With Extra Cheese And Spicy
