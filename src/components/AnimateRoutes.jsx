@@ -1,14 +1,12 @@
 import React, { Suspense } from "react";
 import { Route, Routes, useLocation } from "react-router";
 import { AnimatePresence } from "framer-motion";
-import { lazy } from "react";
-
-const Home = lazy(() => import("../pages/Home"));
-const Product = lazy(() => import("../pages/Product"));
-const About = lazy(() => import("../pages/About"));
-const Campaign = lazy(() => import("../pages/Campaign"));
-const Booking = lazy(() => import("../pages/Booking"));
-const Contact = lazy(() => import("../pages/Contact"));
+// import { lazy } from "react";
+import Home from "../pages/Home";
+import Product from "../pages/Product";
+import About from "../pages/About";
+import Campaign from "../pages/Campaign";
+import Booking from "../pages/Booking";
 
 const AnimateRoutes = () => {
   const location = useLocation();
@@ -21,7 +19,6 @@ const AnimateRoutes = () => {
           <Route path="/about" element={<About />} />
           <Route path="/campaign" element={<Campaign />} />
           <Route path="/booking" element={<Booking />} />
-          <Route path="/contact" element={<Contact />} />
         </Routes>
       </Suspense>
     </AnimatePresence>

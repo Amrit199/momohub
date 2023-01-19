@@ -1,26 +1,28 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Bestproducts from "../components/Bestproducts";
-import Hero from "../components/Hero";
-import Making from "../components/Making";
-import Review from "../components/review/Review";
-import Wine from "../components/wine/Wine";
 import { motion } from "framer-motion";
+import { lazy } from "react";
+
+const Hero = lazy(() => import("../components/Hero"));
+const Making = lazy(() => import("../components/Making"));
+const Bestproducts = lazy(() => import("../components/Bestproducts"));
+const Wine = lazy(() => import("../components/wine/Wine"));
+const Newsletter = lazy(() => import("../components/Newsletter"));
+const Customer = lazy(() => import("../components/customers/Customer"));
+
 const Home = () => {
   return (
     <motion.div
       className="w-full h-[100%]"
-      initial={{ width: "0" }}
-      animate={{ width: "100%" }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      exit={{ x: window.innerWidth }}
     >
       {/* background image and title cards */}
       <div className="w-full h-screen relative bg-home bg-no-repeat bg-cover bg-center bg-fixed">
         <div className="w-full h-full absolute z-10 text-white flex flex-col items-center justify-center text-center gap-6 bg-black/50">
           <div className="font-bold text-4xl lg:text-6xl">
             Try Best Taste Of MOMO
-            hello
           </div>
           <div className="font-bold text-4xl lg:text-6xl">
             With Extra Cheese And Spicy
@@ -44,7 +46,10 @@ const Home = () => {
       <Wine />
 
       {/* Reviews */}
-      <Review />
+      <Customer />
+
+      {/* newsletter */}
+      <Newsletter />
     </motion.div>
   );
 };
