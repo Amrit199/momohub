@@ -4,7 +4,7 @@ import React, { useContext, useState } from "react";
 import CartContext from "../../context/CartContext";
 import { Link, NavLink } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
-import { Close } from "@mui/icons-material"; 
+import { Close } from "@mui/icons-material";
 
 const Navbar = (props) => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -20,7 +20,7 @@ const Navbar = (props) => {
   };
 
   return (
-    <div className="w-full h-full bg-white text-[#5a616c] text-xl z-10">
+    <div className="w-full h-full bg-white text-[#5a616c] z-10">
       <div className="flex items-center justify-between md:justify-around px-5 py-2">
         {/* logo */}
         <Link to={"/"}>
@@ -28,24 +28,56 @@ const Navbar = (props) => {
         </Link>
         {/* nav menu items */}
         <div className="flex gap-4 items-center justify-self-end">
-          <div className="hidden md:flex collapse md:visible text-xl font-bold gap-4">
-            <NavLink to={"/"} className={({isActive}) => (isActive ? "text-white bg-black p-2 rounded-lg" : "transition-colors delay-150 hover:bg-[#5a616c] hover:text-white p-2 rounded-lg")}>
+          <div className="hidden md:flex font-bold gap-4">
+            <NavLink
+              to={"/"}
+              className={({ isActive }) =>
+                isActive
+                  ? "text-white bg-black p-2 rounded-lg"
+                  : "transition-colors delay-150 hover:bg-[#5a616c] hover:text-white p-2 rounded-lg"
+              }
+            >
               Home
             </NavLink>
-            <NavLink to={"/product"} className={({isActive}) => (isActive ? "text-white bg-black p-2 rounded-lg" : "transition-colors delay-150 hover:bg-[#5a616c] hover:text-white p-2 rounded-lg")}>
+            <NavLink
+              to={"/product"}
+              className={({ isActive }) =>
+                isActive
+                  ? "text-white bg-black p-2 rounded-lg"
+                  : "transition-colors delay-150 hover:bg-[#5a616c] hover:text-white p-2 rounded-lg"
+              }
+            >
               Menu
             </NavLink>
-            <NavLink to={"/about"} className={({isActive}) => (isActive ? "text-white bg-black p-2 rounded-lg" : "transition-colors delay-150 hover:bg-[#5a616c] hover:text-white p-2 rounded-lg")}>
+            <NavLink
+              to={"/about"}
+              className={({ isActive }) =>
+                isActive
+                  ? "text-white bg-black p-2 rounded-lg"
+                  : "transition-colors delay-150 hover:bg-[#5a616c] hover:text-white p-2 rounded-lg"
+              }
+            >
               About
             </NavLink>
-            <NavLink to={"/campaign"} className={({isActive}) => (isActive ? "text-white bg-black p-2 rounded-lg" : "transition-colors delay-150 hover:bg-[#5a616c] hover:text-white p-2 rounded-lg")}>
+            <NavLink
+              to={"/campaign"}
+              className={({ isActive }) =>
+                isActive
+                  ? "text-white bg-black p-2 rounded-lg"
+                  : "transition-colors delay-150 hover:bg-[#5a616c] hover:text-white p-2 rounded-lg"
+              }
+            >
               Campaign
             </NavLink>
-            <NavLink to={"/booking"} className={({isActive}) => (isActive ? "text-white bg-black p-2 rounded-lg" : "transition-colors delay-150 hover:bg-[#5a616c] hover:text-white p-2 rounded-lg")}>
+            <NavLink
+              to={"/booking"}
+              className={({ isActive }) =>
+                isActive
+                  ? "text-white bg-black p-2 rounded-lg"
+                  : "transition-colors delay-150 hover:bg-[#5a616c] hover:text-white p-2 rounded-lg"
+              }
+            >
               Reservation
-            </NavLink>
-            <NavLink to={"/contact"} className={({isActive}) => (isActive ? "text-white bg-black p-2 rounded-lg" : "transition-colors delay-150 hover:bg-[#5a616c] hover:text-white p-2 rounded-lg")}>
-              Contact Us  
             </NavLink>
           </div>
 
@@ -71,7 +103,7 @@ const Navbar = (props) => {
           {openMenu ? (
             <div
               onClick={handleClick}
-              className="bg-[#5a616c] text-white rounded-full cursor-pointer active:shadow-[#5a616c] active:shadow-lg transition duration-200 ease-in-out "
+              className="bg-[#5a616c] md:hidden text-white rounded-full cursor-pointer active:shadow-[#5a616c] active:shadow-lg transition duration-200 ease-in-out "
             >
               <Close className="m-1" fontSize="large" />
             </div>
@@ -88,28 +120,60 @@ const Navbar = (props) => {
 
       {/* mobile nav menu items */}
       {openMenu ? (
-        <div className="absolute w-[100%] h-[50%] bg-white text-xl font-bold z-30">
+        <div className="absolute w-full h-full md:hidden bg-white text-xl font-bold z-30">
           <div
             className="w-full h-full py-4 px-1 flex flex-col items-center gap-2 z-30"
             onClick={handleClick}
           >
-            <NavLink to={"/"} className={({isActive}) => (isActive ? "text-white bg-black p-2 rounded-lg" : "transition-colors delay-150 hover:bg-[#5a616c] hover:text-white p-2 rounded-lg")}>
+            <NavLink
+              to={"/"}
+              className={({ isActive }) =>
+                isActive
+                  ? "text-white bg-black p-2 rounded-lg"
+                  : "transition-colors delay-150 hover:bg-[#5a616c] hover:text-white p-2 rounded-lg"
+              }
+            >
               Home
             </NavLink>
-            <NavLink to={"/product"} className={({isActive}) => (isActive ? "text-white bg-black p-2 rounded-lg" : "transition-colors delay-150 hover:bg-[#5a616c] hover:text-white p-2 rounded-lg")}>
+            <NavLink
+              to={"/product"}
+              className={({ isActive }) =>
+                isActive
+                  ? "text-white bg-black p-2 rounded-lg"
+                  : "transition-colors delay-150 hover:bg-[#5a616c] hover:text-white p-2 rounded-lg"
+              }
+            >
               Menu
             </NavLink>
-            <NavLink to={"/about"} className={({isActive}) => (isActive ? "text-white bg-black p-2 rounded-lg" : "transition-colors delay-150 hover:bg-[#5a616c] hover:text-white p-2 rounded-lg")}>
+            <NavLink
+              to={"/about"}
+              className={({ isActive }) =>
+                isActive
+                  ? "text-white bg-black p-2 rounded-lg"
+                  : "transition-colors delay-150 hover:bg-[#5a616c] hover:text-white p-2 rounded-lg"
+              }
+            >
               About
             </NavLink>
-            <NavLink to={"/campaign"} className={({isActive}) => (isActive ? "text-white bg-black p-2 rounded-lg" : "transition-colors delay-150 hover:bg-[#5a616c] hover:text-white p-2 rounded-lg")}>
+            <NavLink
+              to={"/campaign"}
+              className={({ isActive }) =>
+                isActive
+                  ? "text-white bg-black p-2 rounded-lg"
+                  : "transition-colors delay-150 hover:bg-[#5a616c] hover:text-white p-2 rounded-lg"
+              }
+            >
               Campaign
             </NavLink>
-            <NavLink to={"/booking"} className={({isActive}) => (isActive ? "text-white bg-black p-2 rounded-lg" : "transition-colors delay-150 hover:bg-[#5a616c] hover:text-white p-2 rounded-lg")}>
+            <NavLink
+              to={"/booking"}
+              className={({ isActive }) =>
+                isActive
+                  ? "text-white bg-black p-2 rounded-lg"
+                  : "transition-colors delay-150 hover:bg-[#5a616c] hover:text-white p-2 rounded-lg"
+              }
+            >
               Reservation
-            </NavLink>
-            <NavLink to={"/contact"} className={({isActive}) => (isActive ? "text-white bg-black p-2 rounded-lg" : "transition-colors delay-150 hover:bg-[#5a616c] hover:text-white p-2 rounded-lg")}>
-              Contact Us  
             </NavLink>
           </div>
         </div>
