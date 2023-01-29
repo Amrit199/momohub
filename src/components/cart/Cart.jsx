@@ -19,15 +19,20 @@ const Cart = (props) => {
     cartCtx.removeItem(id);
   };
 
+  const handleOrder = () => {
+    alert("Thank you. Your Order has been placed")
+  }
   return (
-    <div className="w-full bg-black/60 absolute pt-16 z-20 font-mono ">
-      <div className="w-full md:w-[60%] my-auto mx-auto relative flex flex-col bg-white">
+    <div className=" fixed top-0 bottom-0 right-0 left-0 z-20">
+      <div className="w-full h-full relative flex flex-col bg-white">
         {hasItems && (
-          <CloseIcon
-            className="absolute top-2 right-3"
-            onClick={props.onCloseCart}
-            fontSize="large"
-          />
+          <div className=" w-full flex items-center justify-between p-6">
+            <h2 className=" text-xl">Your Cart: {cartCtx.items.length} items</h2>
+            <CloseIcon
+              onClick={props.onCloseCart}
+              fontSize="large"
+            />
+          </div>
         )}
         {hasItems && (
           <div className="w-full h-[350px] overflow-y-scroll p-3">
@@ -46,19 +51,11 @@ const Cart = (props) => {
         )}
         <div className="w-full h-[20%] p-4 font-bold text-xl flex items-center justify-between">
           <h1>Total Amount: Kr {totalAmount}</h1>
-          <div className="flex gap-8">
-            <button
-              onClick={props.onCloseCart}
-              className="bg-red-700 text-white px-4 py-2 rounded-lg hover:bg-red-400 hover:text-black"
-            >
-              Close
-            </button>
             {hasItems && (
-              <button className="bg-green-700 text-white px-4 py-2 rounded-lg hover:bg-green-400 hover:text-black">
+              <button onClick={handleOrder} className="bg-green-700 text-white px-4 py-2 rounded-lg hover:bg-green-400 hover:text-black">
                 Order
               </button>
             )}
-          </div>
         </div>
       </div>
     </div>

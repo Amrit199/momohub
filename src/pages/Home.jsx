@@ -19,7 +19,7 @@ const Home = () => {
       transition={{ duration: 1 }}
     >
       {/* background image and title cards */}
-      <div className="w-full h-screen relative bg-home bg-no-repeat bg-cover bg-center bg-fixed">
+      <div className="w-full h-screen relative bg-home bg-cover bg-no-repeat bg-center bg-fixed">
         <div className="w-full h-full absolute z-10 text-white flex flex-col items-center justify-center text-center gap-6 bg-black/50">
           <div className="font-bold text-4xl lg:text-6xl">
             Try Best Taste Of MOMO

@@ -1,37 +1,50 @@
 import React from "react";
-import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
-import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
+import { AiOutlineMinusCircle, AiOutlinePlusCircle } from "react-icons/ai";
 
 const CartItem = (props) => {
+  let itemTotal = props.amount * props.price
   return (
-    <div className="w-full flex items-center justify-center md:justify-between px-1 py-2 md:p-3">
+    <div className="w-full p-4 flex flex-col items-center gap-2">
       {/* items */}
-      <div className="w-full flex items-center gap-3">
+      <div className="w-full flex items-center gap-4 px-3">
         {/* items image */}
-        <img
-          src={props.img}
-          alt=""
-          className="w-[8rem] h-[8rem] object-cover rounded-lg"
-        />
+        <div className=" w-12">
+          <img
+            src={props.img}
+            alt=""
+            className="w-full object-cover rounded-lg"
+          />
+        </div>
         {/* items text */}
+        <h2 className="text-xl">{props.name}</h2>
+      </div>
+      <div className=" w-full h-[1px] bg-gray-400"></div>
+      {/* Add and remove icons */}
+      <div className="w-full flex items-center justify-between gap-2 px-3">
+        <div className=" flex items-center gap-4">
+          <button
+            onClick={props.onRemove}
+            className="active:shadow-inner active:shadow-white text-gray-600 hover:text-black"
+          >
+            <AiOutlineMinusCircle size={30} />
+          </button>
+          <h2 className="text-[#5a616c] border-b-2 border-gray-500">
+            {props.amount}
+          </h2>
+          <button
+            onClick={props.onAdd}
+            className="active:shadow-inner active:shadow-white text-gray-600 hover:text-black"
+          >
+            <AiOutlinePlusCircle size={30} />
+          </button>
+        </div>
         <div>
-          <h1 className="text-xl">{props.name}</h1>
-          <p>{props.price}</p>
+          <p className=" text-xl">
+            {itemTotal}
+            <span className=" font-bold"> -</span>
+          </p>
         </div>
       </div>
-      {/* Add and remove icons */}
-      <div className="w-full flex items-center justify-end text-2xl font-bold gap-2 text-white">
-        <button onClick={props.onRemove} className="bg-[#5a616c] p-1 rounded-full transition-transform hover:scale-110 active:shadow-inner active:shadow-white">
-          <RemoveCircleOutlineIcon fontSize="large" />
-        </button>
-        <h1 className="text-[#5a616c]">
-        {props.amount}
-        </h1>
-        <button onClick={props.onAdd} className="bg-[#5a616c] p-1 rounded-full transition-transform hover:scale-110 active:shadow-inner active:shadow-white">
-          <AddCircleOutlineIcon fontSize="large" />
-        </button>
-      </div>
-      <div></div>
     </div>
   );
 };
