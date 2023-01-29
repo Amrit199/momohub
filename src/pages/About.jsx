@@ -52,11 +52,13 @@ const About = () => {
             <p className="p-2 text-xl">
               We are proud of this, and we are constantly working to improve.
               Annually, we have approx. 40 offers to establish new Egon
-              restaurants both at home and abroad, but we choose to decline most
-              of them as we don't want to get too big. Our goal is to have a
-              wide selection of different restaurant concepts near our
-              restaurants in order to build a varied restaurant offer for
-              customers.
+              restaurants both at home and abroad,
+              <p className=" hidden md:block">
+                but we choose to decline most of them as we don't want to get
+                too big. Our goal is to have a wide selection of different
+                restaurant concepts near our restaurants in order to build a
+                varied restaurant offer for customers.
+              </p>
             </p>
           </div>
           <div className="w-full">
@@ -104,7 +106,9 @@ const About = () => {
             <p className="p-2 text-xl">
               Our guests like our concept, the food and the service. We are keen
               to stick to the concept and use approx. 25 - 30 million to build a
-              new restaurant. Every year we spend a lot of time and resources on
+              new restaurant.
+              <p className=" hidden md:block">
+              Every year we spend a lot of time and resources on
               menu and concept development to satisfy a wide audience across the
               country. We are uncompromising in our concept - Egon must have
               exactly the same concept in all restaurants. We are also proud of
@@ -113,6 +117,7 @@ const About = () => {
               we are one of those with the lowest sickness absence, lowest
               turnover of employees and management teams. This is also one of
               the elements of success for the concept.
+              </p> 
             </p>
           </div>
         </motion.div>
@@ -192,13 +197,16 @@ const About = () => {
               Our policy is that we must act honestly, fairly and correctly both
               internally and externally. This is something we strongly focus on
               above all our employees, suppliers, partners, authorities and not
-              least our guests. We must lead by example and be a counterweight
+              least our guests. 
+              <p className=" hidden md:block">
+              We must lead by example and be a counterweight
               to the bad impression many have of the restaurant industry.
               Therefore, we work closely with the Norwegian authorities' control
               of our routines, general operations and accounts. We are keen to
               maintain our high standards in this regard. It has also led to us
               being used as a consultation body for the authorities in several
               contexts.
+              </p>
             </p>
           </div>
         </motion.div>
@@ -215,8 +223,11 @@ const About = () => {
             <p className="p-2 text-xl">
               All Egon stores must initially be open every day except Christmas
               Eve and Christmas Day. Public holidays generally follow the same
-              opening hours as Sunday. The kitchen must remain open as long as
+              opening hours as Sunday. 
+              <p className=" hidden md:block">
+              The kitchen must remain open as long as
               the announced opening hours.
+              </p>
             </p>
           </div>
           <div className="w-full">

@@ -12,13 +12,14 @@ const Customer = () => {
   console.log(reviews)
 
   const settings = {
+    arrows: false,
     dots: true,
     autoplay: true,
     infinite: true,
     speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    focusOnSelect: true,
+    focusOnSelect: true, 
     
   };
   return (

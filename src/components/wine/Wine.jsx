@@ -30,7 +30,7 @@ const Wine = () => {
               ))}
           </ul>
         </div>
-        <div className="w-96 p-5">
+        <div className="w-90 md:w-96 p-5">
           <img
             src={wineImg}
             alt="Wine"
